@@ -1,0 +1,81 @@
+/* uiversal selector */
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+/* Simple slector */
+h6{
+    color: Red;
+}
+
+/* Group selector */
+del,u,p,strike{
+    color: yellowgreen;
+}
+/* ID selector */
+#para1{
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Class selector */
+.head{
+    font-size: 35px;
+    background-color: rgb(236, 236, 173);
+    text-align: center;
+    font-variant: small-caps;
+}
+.head:hover{
+    background-color: black;
+    color: white;
+}
+
+.poem{
+    background-image: url("backimg.jpg");
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 20px;
+    font-style: italic;
+    /* background-position: 25px; */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+table{
+    border: 4px dashed darkblue;
+    border-radius: 12px;
+    outline: 2px double rgb(70, 245, 1);
+    background-color: cadetblue;
+    outline-offset: 6px;
+    text-align: center;
+}
+
+.container{
+    background-color: blueviolet;
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+    color: aliceblue;
+    
+}
+
+#para2{
+    text-align-last:center;
+    color: black;
+    text-indent: 90px;
+    text-align: justify;
+}
+
+#decore{
+    /* text-decoration: underline wavy black; */
+           
+    text-transform: capitalize;
+    color: rgb(4, 165, 206);
+    font-size: 30px;
+    text-shadow: 3px 16px rgba(128, 204, 138, 0.4) , -15px -15px rgba(216, 89, 67, 0.4);
+    text-align: center;
+    margin-top: 20px;
+}
