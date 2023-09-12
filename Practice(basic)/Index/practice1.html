@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS position</title>
+    <style>
+        .para{
+            background-color: black;
+            position: fixed;
+            color: white;
+            top: 0px;
+            left: 0px;
+        }
+        .para1{
+            background-color: black;
+            position: static;
+            color: white;
+            top: 10px;
+            left: 10px;
+        }
+        .para2
+        {
+            background-color: black;
+            position: relative;
+            color: white;
+            top: 20px;
+            left: 34px;
+            right: 30px;
+        }
+        .para3{
+            background-color: black;
+            position: absolute;
+            color: white;
+            top: 100px;
+            left: 34px;
+            right: 30px;
+        }
+
+        #float{
+            text-align: justify;
+        }
+        img{
+
+            float: right;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .divtag{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            transition: width 3s;
+        }
+        .divtag:hover
+        {
+            width: 300px;
+        }
+        .divtag1{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            transition: width 3s , height 3s, background-color 3s , transform 3s; ;
+        }
+        .divtag1:hover{
+            width: 300px; 
+            height: 200px;
+            background-color: pink;
+            transform: rotate(360deg);
+        }
+
+        .divtag2{
+            width: 100px;
+            height: 100px;
+            background-image:linear-gradient(orange,white,green,pink,#f109de);
+        }
+        .divtag3{
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(to right,orange,white,green,pink,#f109de);
+        }
+        .divtag4{
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(to left,orange,white,green,pink,#f109de);
+        }
+        .divtag5{
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(to top,orange,white,green,pink,#f109de);
+        }
+        .divtag6{
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(to bottom right,orange,white,green,pink,#f109de);
+        }
+        .divtag7{
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(to bottom left,orange,white,green,pink,#f109de);
+        }
+        .divtag8{
+            width: 100px;
+            height: 100px;
+            background-image: repeating-linear-gradient(to top right,orange 10%,white 30%,green 25%,pink 60%);
+        }
+        .divtag9{
+            width: 100px;
+            height: 100px;
+            background-image: radial-gradient(red,blue,chocolate,purple,yellow);
+        }
+        .divtag10{
+            width: 100px;
+            height: 100px;
+            background-image: radial-gradient(circle,red,blue,chocolate,purple,yellow);
+        }
+        .divtag11{
+            width: 100px;
+            height: 100px;
+            background-image: repeating-radial-gradient(circle,red 10%,blue 20%,chocolate 30%,purple 40%,yellow 50%);
+            /* background-attachment: fixed;
+            background-size: cover; */
+        } 
+        .divtag12{
+            width: 100px;
+            height: 100px;
+            background-image: conic-gradient(red,purple,orange,green,skyblue);
+        }
+        .divtag13{
+            width: 100px;
+            height: 100px;
+            background-image: conic-gradient(red 100deg,purple 80deg,orange 270deg,green 300deg,skyblue 360deg);
+            border-radius: 50%;
+        }
+        .divtag14{
+            width: 100px;
+            height: 100px;
+            background-image: repeating-conic-gradient(red 10%,purple 20%,orange 30%,green 40%,skyblue 50%);
+            border-radius: 50%;
+        }
+        .divtag15{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            animation-name: myanimation ;
+            animation-duration: 3s ;
+            animation-iteration-count: infinite;
+        }
+        @keyframes myanimation{
+            from{background-color: red;}
+            to{background-color: blue;}
+        }
+        .divtag16{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            animation-name: myanimation1 ;
+            animation-duration: 3s ;
+            animation-iteration-count: infinite;
+        }
+        @keyframes myanimation1 {
+            0%{background-color: #f109de;}
+            30%{background-color: blueviolet;}
+            60%{background-color: aqua;}
+            80%{background-color: bisque;}
+            100%{background-color: chartreuse;}
+        }
+    </style>
+</head>
+<body>
+    <!-- <p class="para">CSS POSITION PROPERTY</p><br>
+    <p class="para1">CSS POSITION PROPERTY</p>
+    <p class="para2">CSS POSITION PROPERTY</p>
+    <p class="para3">CSS POSITION PROPERTY</p> -->
+
+    <img src="img2.png" alt="images">
+    <p id="float">HTML stands for Hypertext Markup Language. It is used to design the front-end portion of web pages using a markup language. HTML is the combination of Hypertext and Markup language. Hypertext defines the link between the web pages. The markup language is used to define the text documentation within the tag which defines the structure of web pages.
+        CSS: Cascading Style Sheets fondly referred to as CSS is a simply designed language intended to simplify the process of making web pages presentable. CSS allows you to apply styles to web pages. More importantly, CSS enables you to do this independent of the HTML that makes up each web page.
+        JavaScript: JavaScript is a famous scripting language used to create magic on the sites to make the site interactive for the user. It is used to enhancing the functionality of a website to running cool games and web-based software.
+        AJAX: Ajax is an acronym for Asynchronous Javascript and XML. It is used to communicate with the server without refreshing the web page and thus increasing the user experience and better performance.HTML stands for Hypertext Markup Language. It is used to design the front-end portion of web pages using a markup language. HTML is the combination of Hypertext and Markup language. Hypertext defines the link between the web pages. The markup language is used to define the text documentation within the tag which defines the structure of web pages.
+        CSS: Cascading Style Sheets fondly referred to as CSS is a simply designed language intended to simplify the process of making web pages presentable. CSS allows you to apply styles to web pages. More importantly, CSS enables you to do this independent of the HTML that makes up each web page.
+        JavaScript: JavaScript is a famous scripting language used to create magic on the sites to make the site interactive for the user. It is used to enhancing the functionality of a website to running cool games and web-based software.
+        AJAX: Ajax is an acronym for Asynchronous Javascript and XML. It is used to communicate with the server without refreshing the web page and thus increasing the user experience and better performance.HTML stands for Hypertext Markup Language. It is used to design the front-end portion of web pages using a markup language. HTML is the combination of Hypertext and Markup language. Hypertext defines the link between the web pages. The markup language is used to define the text documentation within the tag which defines the structure of web pages.
+        CSS: Cascading Style Sheets fondly referred to as CSS is a simply designed language intended to simplify the process of making web pages presentable. CSS allows you to apply styles to web pages. More importantly, CSS enables you to do this independent of the HTML that makes up each web page.
+        JavaScript: JavaScript is a famous scripting language used to create magic on the sites to make the site interactive for the user. It is used to enhancing the functionality of a website to running cool games and web-based software.
+        AJAX: Ajax is an acronym for Asynchronous Javascript and XML. It is used to communicate with the server without refreshing the web page and thus increasing the user experience and better performance.</p>
+
+        <div class="divtag"></div><br>
+        <div class="divtag1"></div><br>
+
+        <div class="divtag2"></div><br>
+        <div class="divtag3"></div><br>
+        <div class="divtag4"></div><br>
+        <div class="divtag5"></div><br>
+        <div class="divtag6"></div><br>
+        <div class="divtag7"></div><br>
+        <div class="divtag8"></div><br>
+        <div class="divtag9"></div><br>
+        <div class="divtag10"></div><br>
+        <div class="divtag11"></div><br>
+        <div class="divtag12"></div><br>
+        <div class="divtag13"></div><br>
+        <div class="divtag14"></div><br>
+        <div class="divtag15"></div><br>
+        <div class="divtag16"></div><br>
+        
+</body>
+</html>
